@@ -23,6 +23,7 @@ export default function AddTask({ onAdd }) {
 
   return (
     <form className="add-form" onSubmit={onsubmit}>
+        <h3>Update Task</h3>
       <div className="form-control">
         <label>Name</label>
         <input
@@ -62,7 +63,7 @@ export default function AddTask({ onAdd }) {
       <div className="form-control-check">
        
       </div>
-      <input className="btn btn-block" type="submit" value="Save Task"></input>
+      <input style={{backgroundColor:"blue"}} className="btn btn-block" type="submit" value="Save Task"></input>
     </form>
   );
 }

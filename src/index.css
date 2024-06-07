@@ -9,6 +9,11 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+form{
+  border: 2px solid green;
+  border-radius: 10px;
+  padding:16px;
+}
 
 .container {
   max-width: 500px;
@@ -76,14 +81,31 @@ body {
 }
 
 .form-control {
-  margin: 20px 0;
-}
+  margin: 8px 0;
 
+}
+.form-flex{
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  text-align: center;
+}
+.sub-sec{
+  display: flex;
+  width: 50%;
+}
 .form-control label {
   display: block;
 }
 
 .form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+select{
   width: 100%;
   height: 40px;
   margin: 5px;

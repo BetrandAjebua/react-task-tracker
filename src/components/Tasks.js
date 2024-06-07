@@ -2,10 +2,10 @@ import Task from "./Task";
 export default function Tasks({ tasks, onDelete, onToggle }) {
   return (
     <>
-      {tasks.map((activity) => (
+      {tasks.map((task) => (
         <Task
-          key={activity.id}
-          tasks={activity}
+          key={task.id}
+          tasks={task}
           onDelete={onDelete}
           onToggle = {onToggle}
   

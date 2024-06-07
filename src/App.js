@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import Task from "./components/Tasks";
 import AddTask from "./components/AddTask";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -23,27 +24,41 @@ console.log(task);
   };
   // Toggle Reminder
   const  toggleReminder = (id) => {
-setTasks(tasks.map((task)=>task.id===id ? {...task,  setReminder:!task.setReminder}: task))
+setTasks(tasks.map((task)=>task.id===id ? {...task,  attendanceStatus:!task.attendanceStatus}: task))
 
   };
  
   // Use State for Form Component
 const [headForm, setHeadForm]=useState(true);
 
-  const [tasks, setTasks] = useState([
+  const [tasks, setTasks] = useState([ 
+
     {
       id: 1,
-      task: "Complete React project",
-      day: "Monday",
-      setReminder: true,
-    },
+      task: 'JohnSon',
+      matricle:'CT20A078',
+      position: 'Monposition',
+      gender:'male',
+      attendanceStatus: true,
+    },    
     {
       id: 2,
-      task: "Study MongoDB queries",
-      day: "Tuesday",
-      setReminder: false,
-    },
-  ]);
+      gender:'male',
+      matricle:'CT20A0118',
+      task: 'Esidore M',
+      position: 'Tuesposition',
+      attendanceStatus: false,
+    },    
+    {
+      id: 3,
+      gender:'male',
+      task: 'Ramson Kole',
+      matricle:'CT20A0782',
+      position: 'Wednesposition',
+      attendanceStatus: true,
+    }
+
+   ]);
   return (
     <div className="container">
       <Header onAdd={()=>setHeadForm(!headForm)} showHeader = {headForm} />
@@ -53,6 +68,7 @@ const [headForm, setHeadForm]=useState(true);
       ) : (
         "No Task Added"
       )}
+      <Footer />
     </div>
   );
 };
